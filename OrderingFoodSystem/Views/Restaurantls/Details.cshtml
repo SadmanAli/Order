@@ -1,0 +1,51 @@
+﻿@model OrderingFoodSystem.Models.Restaurantls
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/RestaurantTemplate.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Restaurantls</h4>
+    <hr />
+	<dl class="dl-horizontal">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table">
+						<tr>
+							<td>
+								@Html.DisplayNameFor(model => model.RestaurantName)
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								@Html.DisplayFor(model => model.RestaurantName)
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								@Html.DisplayNameFor(model => model.Location)
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								@Html.DisplayFor(model => model.Location)
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RestaurantID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
