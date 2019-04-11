@@ -46,7 +46,7 @@
 				</div>
 				<div class="header-right">
 					<div class="cart box_1">
-						<a href="/Home/OrderInformation">
+						<a href="checkout.html">
 							<h3> <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<img src="images/bag.png" alt=""></h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty card</a></p>
@@ -60,8 +60,8 @@
 			<div class="container">
 				<div class="top-menu">
 					<ul>
-						<li>@Html.ActionLink("Home", "Profile", "Home")</li>
-						<li>@Html.ActionLink("Popular Restaurants", "Index", "Restaurantls")</li>
+						<li>@Html.ActionLink("Home", "Index", "Home")</li>
+						<li>@Html.ActionLink("Popular Restaurants", "Register", "Home")</li>
 						<!--<li><a href="index.html">Home</a></li>|-->
 						<!--<li class="active"><a href="restaurants.html">Popular Restaurants</a></li>|-->
 						
@@ -70,9 +70,13 @@
 					</ul>
 				</div>
 				<div class="login-section">
-					<ul>
-						
-					</ul>
+					<!--<ul>
+		<li><a href="login.html">Login</a>  </li> |
+		<li class="active">@Html.ActionLink("Register", "Create", "Consumers")</li>|
+		<li><a href="#">Help</a></li>
+		<div class="clearfix"></div>
+	</ul>
+		-->
 				</div>
 				<div class="clearfix"></div>
 			</div>

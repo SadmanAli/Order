@@ -34,6 +34,25 @@ namespace OrderingFoodSystem.Controllers
 
 			return View();
 		}
+		public ActionResult RestaurantP()
+		{
+			return View();
+		}
+
+		public ActionResult Item()
+		{
+			ViewBag.Message = "Your contact page.";
+
+			return View();
+		}
+
+		public ActionResult OrderInformation()
+		{
+			ViewBag.Message = "Your contact page.";
+
+			return View();
+		}
+
 
 		[HttpGet]
 		public ActionResult Register()
@@ -158,7 +177,45 @@ namespace OrderingFoodSystem.Controllers
 			Session.Clear();
 			return RedirectToAction("Index");
 		}
+		public ActionResult Profile()
+		{
+			if (Session["UserId"] == null)
+			{
+				return RedirectToAction("Login");
+			}
+			else
+			{
+				return View();
+			}
+		}
+		[HttpPost]
+		public ActionResult Profile(FormCollection collection)
+		{
+			if (Session["UserId"] == null)
+			{
+				return RedirectToAction("Login");
+			}
+			else
+			{
+				
+				return RedirectToAction("Profile");
+			}
+		}
+		public ActionResult CustomerAccountInfo()
+		{
+			if (Session["UserId"] == null)
+			{
+				return RedirectToAction("Login");
+			}
+			else
+			{
+				FoodOrderContext hc = new FoodOrderContext();
+				Registration p = hc.Registrations.Find(Int32.Parse(Session["UserId"].ToString()));
 
-		
+				return View(p);
+			}
+		}
+
+
 	}
 }

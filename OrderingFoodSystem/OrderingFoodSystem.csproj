@@ -135,7 +135,7 @@
     <Compile Include="Controllers\ConsumersController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\ItemlsController.cs" />
     <Compile Include="Controllers\RestaurantlsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -143,7 +143,7 @@
     <Compile Include="Models\Consumer.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\FoodOrderContext.cs" />
-    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Itemls.cs" />
     <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\Restaurantls.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,11 +270,20 @@
     <Content Include="Views\Restaurantls\Details.cshtml" />
     <Content Include="Views\Restaurantls\Edit.cshtml" />
     <Content Include="Views\Restaurantls\Index.cshtml" />
-    <Content Include="Views\Items\Create.cshtml" />
-    <Content Include="Views\Items\Delete.cshtml" />
-    <Content Include="Views\Items\Details.cshtml" />
-    <Content Include="Views\Items\Edit.cshtml" />
-    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Itemls\Create.cshtml" />
+    <Content Include="Views\Itemls\Delete.cshtml" />
+    <Content Include="Views\Itemls\Details.cshtml" />
+    <Content Include="Views\Itemls\Edit.cshtml" />
+    <Content Include="Views\Itemls\Index.cshtml" />
+    <Content Include="Views\Shared\ItemTemplate.cshtml" />
+    <Content Include="Views\Shared\ItemTemp.cshtml" />
+    <Content Include="Views\Home\Item.cshtml" />
+    <Content Include="Views\Shared\ProfileTemplate.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Shared\RestaurantLogin.cshtml" />
+    <Content Include="Views\Home\RestaurantP.cshtml" />
+    <Content Include="Views\Shared\OrderTemplate.cshtml" />
+    <Content Include="Views\Home\OrderInformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

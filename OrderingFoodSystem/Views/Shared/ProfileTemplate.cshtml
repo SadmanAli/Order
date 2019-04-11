@@ -46,7 +46,7 @@
 				</div>
 				<div class="header-right">
 					<div class="cart box_1">
-						<a href="/Home/OrderInformation">
+						<a href="checkout.html">
 							<h3> <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<img src="images/bag.png" alt=""></h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty card</a></p>
@@ -71,8 +71,25 @@
 				</div>
 				<div class="login-section">
 					<ul>
-						
-					</ul>
+						<div class="tools-top">
+							<div class="avatar-profile">
+								<div class="user-edit">
+									<h4 style="color:black">@Session["UserName"]</h4>
+									<a style="color:black" href="/Home/CustomerAccountInfo">edit profile</a>
+								</div>
+								<ul class="tools-help">
+									<li><a style="color:black" href="#" title="Help" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-question-circle"></i></a></li>
+									<li><a style="color:black" href="/Home/Logout" title="Logout" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-sign-out"></i></a></li>
+								</ul>
+								<!--<div class="avatar-image">
+			<img src="@Url.Content("~/Content/Profile/")img/avatar-profile.jpg" alt="avatar profile" class="img-responsive">
+		</div>
+	</div>-->
+								<!--<li><a href="login.html">Login</a>  </li> |
+	<li class="active">@Html.ActionLink("Register", "Create", "Consumers")</li>|
+	<li><a href="#">Help</a></li>-->
+								<div class="clearfix"></div>
+</ul>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -84,3 +101,4 @@
 	</div>
 </body>
 </html>
+

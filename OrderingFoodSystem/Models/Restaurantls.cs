@@ -18,5 +18,7 @@ namespace OrderingFoodSystem.Models
 	public class RestaurantlsDBContext : DbContext
 	{
 		public DbSet<Restaurantls> Restaurantlss { get; set; }
+		
 	}
+	
 }

@@ -1,0 +1,229 @@
+﻿@model IEnumerable<OrderingFoodSystem.Models.Itemls>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/ItemTemplate.cshtml";
+}
+
+<!--
+
+<p>
+	@Html.ActionLink("Create New", "Create")
+</p>
+	-->
+<div class="header">
+	<div class="container">
+		<div class="top-header">
+			<div class="logo">
+				<a href="index.html"><img src="@Url.Content("~/Content/mytemplate/")images/logo.png" class="img-responsive" alt="" /></a>
+			</div>
+			<div class="queries">
+				<p>Any Query? Call us !<span>01933818216/0152130997 </span><label>(11AM to 11PM)<label></p>
+			</div>
+
+
+
+			<div class="header-right">
+				<div class="cart box_1">
+					<a href="checkout.html">
+						<h3> <span class="simpleCart_total"> <td>@Model.Sum(i => i.Price)</td> </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<img src="images/bag.png" alt=""></h3>
+					</a>
+					<p><a href="javascript:;" class="simpleCart_empty">Empty card</a></p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="menu-bar">
+		<div class="container">
+			<div class="top-menu">
+				<ul>
+					<li>@Html.ActionLink("Home", "Index", "Consumers")</li>
+					<li>@Html.ActionLink("Popular Restaurants", "Index", "Restaurantls")</li>
+					<!--<li><a href="index.html">Home</a></li>|-->
+					<!--<li class="active"><a href="restaurants.html">Popular Restaurants</a></li>|-->
+					<li><a href="order.html">Order</a></li>|
+					<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+			<div class="login-section">
+				<ul>
+					<li><a href="login.html">Login</a>  </li> |
+					<li class="active">@Html.ActionLink("Register", "Create", "Consumers")</li>|
+					<li><a href="#">Help</a></li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Name)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Price)
+		</th>
+		<th></th>
+	</tr>
+	<div>
+		<p style="padding-top: 0.5cm">
+	</div>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				<div>
+					<p style="padding-top: 0.2cm">
+						<h4>
+
+							@Html.DisplayFor(modelItem => item.Name)
+						</h4>
+					<p style="padding-bottom: 0.2cm"></p>
+					</p>
+				</div>
+			</td>
+			<td>
+				<div>
+					<p style="padding-top: 0.2cm">
+						<h4>
+							@Html.DisplayFor(modelItem => item.Price)
+						</h4>
+					<p style="padding-bottom: 0.2cm"></p>
+					</p>
+				</div>
+			</td>
+			<td>
+				<div class="col-md-7 buy">
+
+					<a class="morebtn hvr-rectangle-in" href="/Home/Contact">Pick</a>
+				</div>
+				<!--@Html.ActionLink("Edit", "Edit", new { id = item.ItemID }) |-->
+				<!--@Html.ActionLink("Details", "Details", new { id = item.ItemID }) |-->
+				<!--@Html.ActionLink("Delete", "Delete", new { id = item.ItemID })-->
+			</td>
+
+		</tr>
+	}
+	<!--<tr>
+		<td>Total</td>
+		<td>@Model.Sum(i => i.Price)</td>
+	</tr>
+		-->
+
+</table>
+
+<p style="padding-bottom: 0.5cm"></p>
+							</p>
+
+					</div>
+
+
+
+
+				</div>
+
+				</table>
+<!--</table>-->
+			</div>
+			</div>
+			</div>
+<div class="contact-section" id="contact">
+	<div class="container">
+		<div class="contact-section-grids">
+			<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
+				<h4>Site Links</h4>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">About Us</a></li>
+				</ul>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">Contact Us</a></li>
+				</ul>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">Privacy Policy</a></li>
+				</ul>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">Terms of Use</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 contact-section-grid wow fadeInLeft" data-wow-delay="0.4s">
+				<h4>Site Links</h4>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">About Us</a></li>
+				</ul>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">Contact Us</a></li>
+				</ul>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">Privacy Policy</a></li>
+				</ul>
+				<ul>
+					<li><i class="point"></i></li>
+					<li class="data"><a href="#">Terms of Use</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 contact-section-grid wow fadeInRight" data-wow-delay="0.4s">
+				<h4>Follow Us On...</h4>
+				<ul>
+					<li><i class="fb"></i></li>
+					<li class="data"> <a href="#">  Facebook</a></li>
+				</ul>
+				<ul>
+					<li><i class="tw"></i></li>
+					<li class="data"> <a href="#">Twitter</a></li>
+				</ul>
+				<ul>
+					<li><i class="in"></i></li>
+					<li class="data"><a href="#"> Linkedin</a></li>
+				</ul>
+				<ul>
+					<li><i class="gp"></i></li>
+					<li class="data"><a href="#">Google Plus</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 contact-section-grid nth-grid wow fadeInRight" data-wow-delay="0.4s">
+				<h4>Subscribe Newsletter</h4>
+				<p>To get latest updates and food deals every week</p>
+				<input type="text" class="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+				<input type="submit" value="submit">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- content-section-ends -->
+<!-- footer-section-starts -->
+<div class="footer">
+	<div class="container">
+		<p class="wow fadeInLeft" data-wow-delay="0.4s">&copy; 2014  All rights  Reserved | Template by &nbsp;<a href="http://w3layouts.com" target="target_blank">W3Layouts</a></p>
+	</div>
+</div>
+<!-- footer-section-ends -->
+<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear'
+					 		};
+							*/
+
+							$().UItoTop({ easingType: 'easeOutQuart' });
+
+						});
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
